@@ -25,7 +25,7 @@
 	header a {
 		color: white;
 		text-decoration: none;
-		font-size: 1.3em;
+		font-size: 1.2em;
 	}
 	.logo {
 		margin: 0 auto 0 35px;

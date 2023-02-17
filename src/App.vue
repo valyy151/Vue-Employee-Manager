@@ -1,12 +1,18 @@
 <template>
 	<Navbar />
+
+	<Button
+		color="none"
+		text="Add Task" />
 </template>
 
 <script>
 	import Navbar from './components/Vue-Navbar.vue';
+	import Button from './components/Vue-Button.vue';
+
 	export default {
 		name: 'App',
-		components: { Navbar },
+		components: { Navbar, Button },
 	};
 </script>
 
