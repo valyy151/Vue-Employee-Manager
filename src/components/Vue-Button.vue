@@ -1,6 +1,11 @@
 <template>
 	<div class="button">
-		<button :style="{ background: color }">{{ text }}</button>
+		<button
+			@click="addTask()"
+			:style="{ background: color }"
+		>
+			{{ text }}
+		</button>
 	</div>
 </template>
 
@@ -11,6 +16,7 @@
 			text: String,
 			color: String,
 		},
+		methods: {},
 	};
 </script>
 
@@ -21,7 +27,7 @@
 	.button button {
 		padding: 5px 15px;
 
-		border: 1px solid #3eaf7c;
+		border: 1.5px solid #3eaf7c;
 		color: #3eaf7c;
 		font-size: 1.2em;
 		border-radius: 10px;
