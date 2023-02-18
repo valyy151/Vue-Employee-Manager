@@ -1,54 +1,48 @@
 <template>
 	<Navbar />
-	<Employees :employees="employees" />
+	<Workers :workers="workersArray" />
 </template>
 
 <script>
+	import { toNumber } from '@vue/shared';
 	import Navbar from './components/Vue-Navbar.vue';
-	import Employees from './components/Vue-Employees.vue';
+	import Workers from './components/Vue-Workers.vue';
+
 	export default {
 		name: 'App',
-		components: { Navbar, Employees },
+		components: { Navbar, Workers },
 		data() {
-			return { employees: [] };
+			return { workersArray: [] };
 		},
 		created() {
-			this.employees = [
+			this.workersArray = [
 				{
-					verified: false,
 					id: 1,
 					name: 'Jack Jackson',
-					begin: 14,
-					end: 22,
-					hours: 8,
-					date: Date.now,
+					begin: toNumber('12:00'),
+					end: toNumber('20:00'),
+					date: toNumber('18.02.2023'),
 				},
 				{
-					verified: false,
 					id: 2,
 					name: 'Susan Garcia',
-					begin: 14,
-					end: 22,
-					hours: 8,
-					date: Date.now,
+					begin: toNumber('12:00'),
+					end: toNumber('20:00'),
+					date: toNumber('18.02.2023'),
 				},
 				{
-					verified: false,
 					id: 3,
 					name: 'David Samuels',
-					begin: 16,
-					end: 23,
-					hours: 7,
-					date: Date.now,
+					begin: toNumber('12:00'),
+					end: toNumber('20:00'),
+					date: toNumber('18.02.2023'),
 				},
 				{
-					verified: true,
 					id: 4,
 					name: 'Ruth Huggins',
-					begin: 16,
-					end: 23,
-					hours: 7,
-					date: Date.now,
+					begin: toNumber('12:00'),
+					end: toNumber('20:00'),
+					date: toNumber('18.02.2023'),
 				},
 			];
 		},
